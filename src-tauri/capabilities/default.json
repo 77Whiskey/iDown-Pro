@@ -1,0 +1,10 @@
+{
+  "$schema": "https://raw.githubusercontent.com/nicholastay/tauri-v2-schemas/main/capability.json",
+  "identifier": "default",
+  "description": "Default capabilities for the main window",
+  "windows": ["main"],
+  "permissions": [
+    "core:default",
+    "shell:allow-open"
+  ]
+}

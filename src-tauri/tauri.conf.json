@@ -1,0 +1,40 @@
+{
+  "$schema": "https://raw.githubusercontent.com/nicholastay/tauri-v2-schemas/main/tauri.conf.json",
+  "productName": "Instagram Downloader Pro",
+  "version": "0.1.0",
+  "identifier": "com.instagram-downloader-pro",
+  "build": {
+    "frontendDist": "../dist",
+    "devUrl": "http://localhost:1420",
+    "beforeDevCommand": "npm run dev",
+    "beforeBuildCommand": "npm run build"
+  },
+  "app": {
+    "windows": [
+      {
+        "title": "Instagram Downloader Pro",
+        "width": 1200,
+        "height": 800,
+        "minWidth": 900,
+        "minHeight": 600,
+        "decorations": false,
+        "transparent": false,
+        "center": true
+      }
+    ],
+    "security": {
+      "csp": "default-src 'self'; img-src 'self' https://*.cdninstagram.com https://*.fbcdn.net; connect-src 'self' https://www.instagram.com https://i.instagram.com https://api.github.com"
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ]
+  }
+}
